@@ -1,0 +1,231 @@
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\grays\OneDrive - University of Ottawa\VS Code\ITI 1120\ASSIGNMENTS\Assignment 1\a1_300349204.py
+
+
+# testing Question 1
+
+f_to_k(90)
+305.3722222222222
+
+f_to_k(-457.87)
+0.9999999999999432
+
+
+# testing Question 2
+
+poem_generator()
+What is your name? Patrick
+What city were you born in? Toronto
+Beneath the boughs of ancient trees,
+Where whispers float on gentle breeze,
+Adventures call, in lands untold,
+Legends woven, in stories old.
+
+Patrick of Toronto, you are the one,
+To whom the quest is now begun.
+So onward, Patrick, to lands unknown,
+Your destiny, it waits alone.
+
+
+# testing Question 3
+
+impl2loz(7.5)
+Enter a value greater than or equal to zero: 7.5
+(7, 8.0)
+
+impl2loz(9.25)
+Enter a value greater than or equal to zero: 9.25
+(9, 4.0)
+
+
+# testing Question 4
+
+pale(1128)
+Enter a four digit number: 1128
+False
+
+pale(3443)
+Enter a four digit number: 3443
+True
+
+pale(3351)
+Enter a four digit number: 3351
+False
+
+pale(3333)
+Enter a four digit number: 3333
+False
+
+pale(4331)
+Enter a four digit number: 4331
+False
+
+pale(3423)
+Enter a four digit number: 3423
+True
+
+pale(4533)
+Enter a four digit number: 4533
+False
+
+# testing Question 5
+
+bibformat("George R. R. Martin", "A Game of Thrones", "New York City", "Bantam Spectra", 1996)
+'George R. R. Martin (1996). A Game of Thrones. New York City: Bantam Spectra.'
+
+
+# testing Question 6
+
+bibformat_display()
+Enter the author's name: Guns, Germs, and Steel: The Fates of Human Societies
+Enter the title: Oops I mixed up the author and title
+Enter the city: New York City
+Enter the publisher: W. W. Norton
+Enter the year of publication: 1997
+Guns, Germs, and Steel: The Fates of Human Societies (1997). Oops I mixed up the author and title. New York City: W. W. Norton.
+
+
+# testing Question 7
+
+compound(80,40,31)
+Enter the first number: 80
+Enter the second number: 40
+Enter the third number: 31
+False
+
+compound(80,41,31)
+Enter the first number: 80
+Enter the second number: 41
+Enter the third number: 31
+True
+
+compound(8,1,31)
+Enter the first number: 8
+Enter the second number: 1
+Enter the third number: 31
+False
+
+compound(80,1,31)
+Enter the first number: 80
+Enter the second number: 1
+Enter the third number: 31
+True
+
+compound(80,1001,-44)
+Enter the first number: 80
+Enter the second number: 1001
+Enter the third number: -44
+False
+
+compound(-2,1001,-43)
+Enter the first number: -2
+Enter the second number: 1001
+Enter the third number: -43
+True
+
+
+# testing Question 8
+
+funct(11)
+Enter a number: 11
+r =  0.0
+
+funct(12)
+Enter a number: 12
+r =  0.6562595203678139
+
+funct(10300)
+Enter a number: 10300
+r =  2.395927506817742
+
+funct(1000000000)
+Enter a number: 100000000
+r =  3.3831069156108042
+
+
+# testing Question 9
+
+gol(5.4)
+Enter a number greater than or equal to 1: 5.4
+3
+
+gol(4)
+Enter a number greater than or equal to 1: 4
+2
+
+gol(1000)
+Enter a number greater than or equal to 1: 1000
+10
+
+gol(4200231)
+Enter a number greater than or equal to 1: 4200231
+23
+
+
+# testing Question 10
+
+draw_rocket()
+# WARNING: Patience you must have
+
+
+# testing Question 11
+
+cad_cashier(10.58,11)
+Enter the price of the item: 10.58
+Enter the amount paid: 11
+0.4
+
+cad_cashier(98.87,100)
+Enter the price of the item: 98.87
+Enter the amount paid: 100
+1.15
+
+cad_cashier(10.58,15)
+Enter the price of the item: 10.58
+Enter the amount paid: 15
+4.4
+
+cad_cashier(10.55,15)
+Enter the price of the item: 10.55
+Enter the amount paid: 15
+4.45
+
+cad_cashier(10.54,15)
+Enter the price of the item: 10.54
+Enter the amount paid: 15
+4.45
+>>> 
+>>> cad_cashier(10.52,15)
+Enter the price of the item: 10.52
+Enter the amount paid: 15
+4.5
+>>> 
+>>> cad_cashier(10.50,15)
+Enter the price of the item: 10.50
+Enter the amount paid: 15
+4.5
+>>> 
+>>> 
+>>> # testing Question 12
+>>> 
+>>> min_CAD_coins(10.58,11)
+Enter the price of the item: 10.58
+Enter the amount paid: 11
+(('Toonies: ', 0), ('Loonies: ', 0), ('Quarters: ', 1), ('Dimes: ', 1), ('Nickels: ', 1))
+>>> 
+>>> min_CAD_coins(98.87,100)
+Enter the price of the item: 98.87
+Enter the amount paid: 100
+(('Toonies: ', 0), ('Loonies: ', 1), ('Quarters: ', 0), ('Dimes: ', 1), ('Nickels: ', 0))
+>>> 
+>>> min_CAD_coins(10.58,15)
+Enter the price of the item: 10.58
+Enter the amount paid: 15
+(('Toonies: ', 2), ('Loonies: ', 0), ('Quarters: ', 1), ('Dimes: ', 1), ('Nickels: ', 1))
+>>> 
+>>> min_CAD_coins(10.55,15)
+Enter the price of the item: 10.55
+Enter the amount paid: 15
+(('Toonies: ', 2), ('Loonies: ', 0), ('Quarters: ', 1), ('Dimes: ', 1), ('Nickels: ', 1))

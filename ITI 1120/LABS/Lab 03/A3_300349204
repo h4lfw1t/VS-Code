@@ -1,0 +1,37 @@
+# Course: ITI 1120
+# Assignment number: 
+# Geraghty, Patrick
+# 300349204
+
+##################### PART 1 #####################
+
+def pay(wage, hours):
+    '''
+    (number) -> number
+    Return the pay for the week if any hours over 40 are paid at 1.5 times the regular wage and over 60 at 2.0 times regular wage.
+    Preconditions: wage is a positive number, hours is a positive number
+    '''
+    if hours <= 40:
+        return wage * hours
+    elif hours <= 60:
+        return (wage * 40) + ((hours - 40) * (wage * 1.5))
+    else:
+        return (wage * 40) + (20 * (wage * 1.5)) + ((hours - 60) * (wage * 2.0))
+    
+    
+##################### PART 2 #####################
+
+def rps(player1, player2):
+    '''
+    (str, str) -> int
+    Return the winner of a game of rock paper scissors.
+    Preconditions: player1 is either rock, paper, or scissors and player2 is either rock, paper, or scissors
+    '''
+    if player1 == player2:
+        return 0
+    elif player1 == "R":
+        return 1 if player2 == "P" else -1
+    elif player1 == "P":
+        return 1 if player2 == "S" else -1
+    else:
+        return 1 if player2 == "R" else -1

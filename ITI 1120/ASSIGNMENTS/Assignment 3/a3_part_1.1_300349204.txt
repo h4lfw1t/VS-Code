@@ -1,0 +1,30 @@
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\grays\OneDrive - University of Ottawa\VS Code\ITI 1120\ASSIGNMENTS\Assignment 3\a3_part_1_300349204.py
+
+>>> # Core Function
+>>> 
+>>> is_up_monotone("12311234", "2")
+12, 31, 12, 34
+False
+>>> is_up_monotone("12311234", "4")
+1231, 1234
+True
+>>> is_up_monotone("0012311234", "2")
+00, 12, 31, 12, 34
+False
+>>> is_up_monotone("0012311234", "5")
+00123, 11234
+True
+>>> is_up_monotone("1", "1")
+1
+True
+>>> is_up_monotone("734", "1")
+7, 3, 4
+False
+>>> is_up_monotone("734", "3")
+734
+True
+>>> 
+>>> 

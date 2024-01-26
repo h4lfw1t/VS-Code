@@ -1,0 +1,20 @@
+# Course: ITI 1120
+# Assignment number: 
+# Geraghty, Patrick
+# 300349204
+
+
+def is_divisible(m, n):
+    '''
+    (int, int) -> bool
+    Return whether or not the first number is divisible by the second.
+    Preconditions: both numbers are positive integers
+    '''
+    return m%n == 0
+    
+m = int(input("Enter a positive integer: "))
+n = int(input("Enter another positive integer: "))
+if is_divisible(m, n) == True:
+    print(m, "is divisible by", n)
+else:
+    print(m, "is not divisible by", n)

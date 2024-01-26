@@ -1,0 +1,157 @@
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\grays\OneDrive - University of Ottawa\VS Code\ITI 1120\ASSIGNMENTS\Assignment 3\a3_part_2_300349204.py
+# 2.1
+>>>
+>>> sum_odd_divisors(-9)
+13
+>>> sum_odd_divisors(1)
+1
+>>> sum_odd_divisors(2)
+1
+>>> sum_odd_divisors(3)
+4
+>>> sum_odd_divisors(7)
+8
+>>> sum_odd_divisors(-2001)
+2880
+>>> 
+>>> # 2.2
+>>> 
+>>> series_sum()
+Enter a positive integer: -10
+>>> series_sum()
+Enter a positive integer: 0
+1000
+>>> series_sum()
+Enter a positive integer: 5
+1001.463611111111
+>>> 
+>>> # 2.3
+>>> 
+>>> pell(0)
+0
+>>> pell(1)
+1
+>>> pell(2)
+2
+>>> pell(3)
+3
+>>> pell(-45)
+>>> pell(6)
+3
+>>> pell(1743)
+3
+>>>
+>>>pell(6)
+70
+>>>pell(1743)
+5326900078425743495271120093406485842060394205546522356059179683018785602043913589772889707680889489315129792427576755779932903927590796096356142560716184062989945326433852266388531024433180713417570128883076273617391429167897553934860516877706888262708922562946229202920026713541197831275496907359647493909144330909669289854822116229957111784371130461835312024066424243380670442237492345659882602876601915557419461390084895406338616727142512465145728086571561718366590075224267096789466901316272548545119419375010644023710050174449865398549080648573275971391766888140795278589784125777930589385552442770334739832507514635151419472104046900160626484896467099596437905
+>>>
+# 2.4
+>>>
+>>>countMembers("\\")
+1
+>>>countMembers("2\'")
+1
+>>>countMembers("1\'")
+0
+>>>countMembers("2aAb3?eE'_13")
+4
+>>>countMembers("one, Two")
+3
+>>>
+>>> # 2.5
+>>> 
+>>> casual_number("251")
+251
+>>> casual_number("1.aba.251")
+>>> casual_number("1,251")
+1251
+>>> casual_number("1251")
+1251
+>>> casual_number("-97,251")
+-97251
+>>> casual_number("-....")
+>>> casual_number("--97,251")
+>>> casual_number("-")
+>>> casual_number("-1,000,001")
+-1000001
+>>> casual_number("999,999,999,876")
+999999999876
+>>> casual_number("-2")
+-2
+>>> 
+>>> # 2.6
+>>> 
+>>> alienNumbers("a!ya!U!NaU")
+1095
+>>> alienNumbers("aaaUUU")
+129
+>>> alienNumbers("")
+0
+>>> 
+# 2.7
+>>>
+>>>alienNumbersAgain("a!ya!U!NaU")
+1095
+>>>alienNumbersAgain("aaaUUU")
+129
+>>>alienNumbersAgain("")
+0
+>>>
+# 2.8
+>>>
+>>>encrypt("Hello, world")
+dHlerlolwo ,
+>>>encrypt("1234")
+4132
+>>>encrypt("12345")
+51423
+>>>encrypt("1")     
+1
+>>>encrypt("123")
+312
+>>>encrypt("12")   
+21
+>>> encrypt("Secret Message") 
+eSgeacsrseetM 
+>>> encrypt(".'4'r")
+r.''4
+>>> 
+>>> # 2.9
+>>> 
+>>> weaveop("aa")
+'aopa'
+>>> weaveop("aB")
+'aoPB'
+>>> weaveop("ooo")
+'oopoopo'
+>>> weaveop("ax1")  
+'aopx1'
+>>> weaveop("abcdef22")
+'aopbopcopdopeopf22'
+>>> weaveop("abcdef22x")
+'aopbopcopdopeopf22x'
+>>> weaveop("aBCdef22x")
+'aoPBOPCOpdopeopf22x'
+>>> weaveop("x")
+>>> weaveop("123456")
+'123456'
+>>>
+>>> # 2.10
+>>> 
+>>> squarefree("")
+True
+>>> squarefree("a")
+True
+>>> squarefree("zrtzghtghtghtq")
+False
+>>> squarefree("abcab")
+True
+>>> squarefree("12341341")
+False
+>>> squarefree("44")
+False
+

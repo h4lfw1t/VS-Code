@@ -1,0 +1,45 @@
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\grays\OneDrive - University of Ottawa\VS Code\ITI 1120\ASSIGNMENTS\Assignment 2\a2_part_2_300349204.py
+
+
+# testing part 2.1
+
+min_enclosing_rectangle(4, 3, 2)
+(-1, -2)
+>>> 
+>>> min_enclosing_rectangle(1, 1, 1)
+(0, 0)
+>>> 
+>>> min_enclosing_rectangle(-2, 3, 1)
+>>> 
+>>> 
+>>> # testing part 2.2
+>>> 
+>>> vote_percentage("yes, yes, yes, yes, yes, yes, abstained")
+1.0
+>>> 
+>>> vote_percentage("no, no, no, abstained")
+0.0
+
+>>> vote_percentage("yes, yes, no, yes, abstained, yes, no, no, yes, yes, yes, abstained, no")
+0.6363636363636364
+>>> 
+>>> # testing part 2.3
+>>> 
+>>> vote()
+Enter the yes, no, abstained votes separated by commas or spaces: yes, yes, yes, yes
+The proposal passes unanimously.
+>>> 
+>>> vote()
+Enter the yes, no, abstained votes separated by commas or spaces: yes, yes, no,  abstained
+The proposal passes with super majority.
+>>> 
+>>> vote()
+Enter the yes, no, abstained votes separated by commas or spaces: yes, no
+The proposal passes with simple majority.
+>>> 
+>>> vote()
+Enter the yes, no, abstained votes separated by commas or spaces: no
+There is no majority, thus the proposal does not pass.

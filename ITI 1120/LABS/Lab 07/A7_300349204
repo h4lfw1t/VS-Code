@@ -1,0 +1,266 @@
+###############################################################
+# 5.16
+###############################################################
+
+def indexes(s,a):
+    '''(str, str)->list
+    Given a string 's' and a character 'a', returns a list containing the indexes at which 'a' occurs in 's'.
+    Preconditions: s is a string, a is a single-character string.
+    >>>indexes("banana","a")
+    [1,3,5]
+    >>>indexes("mississippi","s")
+    [2,3,5,6]
+    >>>indexes("mississippi","i")
+    [1,4,7,10]
+    >>>indexes("mississippi","a")
+    []
+    '''
+    f=[]
+    for i in range(len(s)):
+        if s[i]==a:
+            f.append(i)
+    return f
+
+###############################################################
+# 5.17
+###############################################################
+
+def doubles(x):
+    '''(list)->NoneType
+    Given a list 'x', prints each element of 'x' that is exactly double the value of it's previous element.
+    Preconditions: x is a list of integers
+    >>>doubles([3,0,1,2,3,6,2,4,5,6])
+    2
+    6
+    4
+    '''
+    for i in range(len(x)-1):
+        if x[i]==((x[i+1])/2):
+            print(x[i])
+
+###############################################################
+# 5.18
+###############################################################
+
+def four_letter(l):
+    '''(list)->list
+    Given list 'l', returns a sublist containing only the four letter elements of 'l'.
+    Preconditions: l is a list of strings
+    >>>four_letter(["this","is","a","list","of","strings"])
+    ["this","list"]
+    >>>four_letter(['dog','letter','stop','door','bus','dust'])
+    ['stop','door','dust']
+    '''
+    f=[]
+    for i in range(len(l)):
+        if len(l[i])==4:
+            f.append(l[i])
+    return f
+
+###############################################################
+# 5.19
+###############################################################
+
+def inBoth(x,y):
+    '''
+    (list,list)->bool
+    Given two lists 'x' and 'y', returns True if there is at least one element that is common to both lists.
+    Preconditions: x and y are lists
+    >>>inBoth([3,2,5,4,7],[9,0,1,3])
+    True
+    '''
+    for i in range(len(x)):
+        if x[i] in y:
+            return True
+    return False
+
+###############################################################
+# 5.20
+###############################################################
+
+def intersect(x,y):
+    '''
+    (list,list)->
+    Given two lists 'x' and 'y', returns a list containing values that are present in both lists.
+    Preconditions: x and y are lists with no duplicate values.
+    >>>intersect([3,5,1,7,9],[4,2,6,3,9])
+    [3,9]
+    '''
+    f=[]
+    for i in range(len(x)):
+        if x[i] in y:
+            f.append(x[i])
+    return f
+
+###############################################################
+# 5.21
+###############################################################
+
+def pair(x,y,n):
+    '''
+    (list,list,int)->NoneType
+    Given lists 'x' and 'y', prints all pairs of elements from each list that add to 'n'.
+    Preconditions: x and y are lists of integers, n is an integer.
+    >>>pair([2,3,4],[5,7,9,12],9)
+    2 7
+    4 5    
+    '''
+    for i in range(len(x)):
+        for j in range(len(y)):
+            if x[i]+y[j]==n:
+                print(x[i],y[j])
+
+###############################################################
+# 5.22
+###############################################################
+
+def pairSum(lst,n):
+    '''
+    (list,int)->NoneType
+    Given a list 'lst', prints the indexes of all pairs of elements that add to 'n'.
+    Preconditions: lst is a list of integers, n is an integer.
+    >>>pairSum([7,8,5,3,4,6],11)
+    0 4
+    1 3
+    2 5
+    '''
+    for i in range(len(lst)):
+        for j in range(len(lst)):
+            if lst[i]+lst[j]==n:
+                print(i,j)
+
+###############################################################
+# 5.29
+###############################################################
+
+def lastFirst(l):
+    '''
+    (list)->list
+    Given a list 'l', returns a list consisting of the two list containing the first and last element of 'l'.
+    Preconditions: l is a list of strings.
+    >>>lastFirst(['Gerber, Len','Fox, Kate','Dunn, Bob'])
+    [['Len','Kate','Bob'],['Gerber','Fox','Dunn']]
+    '''
+    f=[]
+    g=[]
+    t=[]
+    s=[]
+    for i in range(len(l)):
+        s.append(l[i].split(','))
+    for i in range(len(s)):
+        f.append(s[i][1])
+        g.append(s[i][0])
+    t.append(f)
+    t.append(g)
+    return t
+
+###############################################################
+# 5.31
+###############################################################
+
+def subsetSum(l,n):
+    '''
+    (list,int)->bool
+    Given a list 'l', returns True if there are three elements in 'l' that add to 'n'.
+    Preconditions: l is a list of integers, n is a positive integer.
+    >>>subsetSum([5,4,10,20,15,19],38)
+    True
+    >>>subsetSum([5,4,10,20,15,19],10)
+    False
+    '''
+    for i in range(len(l)):
+        for j in range(len(l)):
+            for k in range(len(l)):
+                if l[i]+l[j]+l[k]==n:
+                    return True
+    return False
+
+###############################################################
+# 5.33
+###############################################################
+
+def mystery(n):
+    '''
+    (int)->int
+    Given an integer 'n', returns the number of times 'n' can be halved before reaching 1.
+    Preconditions: n is an integer.
+    mystery(4)
+    2
+    >>>mystery(11)
+    3
+    >>>mystery(25)
+    4
+    '''
+    count=0
+    while n>1:
+        n=n/2
+        count+=1
+    return count
+
+###############################################################
+# 5.46
+###############################################################
+
+def inversions(s):
+    '''
+    (str)->int
+    Given a string 's', returns the number of inversions in 's'.
+    Preconditions: s is a string of uppercase letters.
+    >>>inversions('ABBFHDL')
+    2
+    >>>inversions('ABCD')
+    0
+    >>>inversions('DCBA')
+    6
+    '''
+    count=0
+    for i in range(len(s)):
+        for j in range(i+1,len(s)):
+            if s[i]>s[j]:
+                count+=1
+    return count
+
+###############################################################
+# 5.48
+###############################################################
+
+def sublists(x,y):
+    '''
+    (list,list)->bool
+    Given lists 'x' and 'y', returns True if the all the elements in 'x' appear in 'y' in the same order.
+    Preconditions: x and y are lists.
+    >>>sublists([15,1,100],[20,15,30,50,1,100])
+    True
+    >>>sublists([15,50,20],[20,15,30,50,1,100])
+    False
+    '''
+    c=[]
+    for i in range(len(y)):
+        if y[i] in x:
+            c.append(y[i])
+    if c==x:
+        return True
+    return False
+
+###############################################################
+# 5.37
+###############################################################
+
+def mssl(l):
+    '''
+    (list)->int
+    Given a list 'l', returns the maximum sum of a sublist of consecutive elements in 'l', and 0 if the sum is negative.
+    Preconditions: l is a list of integers.
+    >>>mssl([4,-2,-8,5,-2,7,7,2,-6,5])
+    19
+    >>>mssl([3,4,5])
+    12
+    >>>mssl([-2,-3,-5])
+    0
+    '''
+    max=0
+    for i in range(len(l)):
+        for j in range(i+1,len(l)+1):
+            if sum(l[i:j])>max:
+                max=sum(l[i:j])
+    return max

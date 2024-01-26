@@ -1,0 +1,124 @@
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\grays\OneDrive - University of Ottawa\VS Code\ITI 1120\ASSIGNMENTS\Assignment 3\a3_part_1_300349204.py
+**************************************
+*                                    *
+* __Welcome to up-monotone inquiry__ *
+*                                    *
+**************************************
+What is your name?    Patrick
+************************************************
+*                                              *
+* __Patrick, Welcome to up-monotone inquiry.__ *
+*                                              *
+************************************************
+Patrick, would you like to test if a number admits an up-monotone split of given size? sure
+Please answer with yes or no. Try again.
+Patrick, would you like to test if a number admits an up-monotone split of given size? sure
+Please answer with yes or no. Try again.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yEs
+Good choice!
+Enter a positive integer:   123156
+Input the split. The split has to divide the length of 123456 i.e. 6:   4
+Error: the length of X is not a multiple of d. Try again.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   123156
+Input the split. The split has to divide the length of 123456 i.e. 6:   3
+123, 156
+The sequence is up-monotone.
+Patrick, would you like to test if a number admits an up-monotone split of given size? YES
+Good choice!
+Enter a positive integer:   3.4
+Input the split. The split has to divide the length of 123456 i.e. 6:   1
+Error: The input can only be an integer. Try again.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   -44
+Input the split. The split has to divide the length of 123456 i.e. 6:   1
+Error: The input can only be an integer. Try again.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   3331
+Input the split. The split has to divide the length of 123456 i.e. 6:   2
+33, 31
+The sequence is not up-monotone.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   twenty
+Input the split. The split has to divide the length of 123456 i.e. 6:   1
+Error: The input can only be an integer. Try again.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   4321
+Input the split. The split has to divide the length of 123456 i.e. 6:   1
+4, 3, 2, 1
+The sequence is not up-monotone.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   4321
+Input the split. The split has to divide the length of 123456 i.e. 6:   4
+4321
+The sequence is up-monotone.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   -2.5
+Input the split. The split has to divide the length of 123456 i.e. 6:   1
+Error: The input can only be an integer. Try again.
+Patrick, would you like to test if a number admits an up-monotone split of given size? 0
+Please answer with yes or no. Try again.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   0
+Input the split. The split has to divide the length of 123456 i.e. 6:   1
+Error: The input can only be a positive integer. Try again.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   77
+Input the split. The split has to divide the length of 123456 i.e. 6:   2
+77
+The sequence is up-monotone.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   22
+Input the split. The split has to divide the length of 123456 i.e. 6:   -5
+Error: d can only be an integer. Try again.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   345
+Input the split. The split has to divide the length of 123456 i.e. 6:   3
+345
+The sequence is up-monotone.
+Patrick, would you like to test if a number admits an up-monotone split of given size? 4
+Please answer with yes or no. Try again.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   345
+Input the split. The split has to divide the length of 123456 i.e. 6:   3
+345
+The sequence is up-monotone.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   213411800
+Input the split. The split has to divide the length of 123456 i.e. 6:   3
+213, 411, 800
+The sequence is up-monotone.
+Patrick, would you like to test if a number admits an up-monotone split of given size? yes
+Good choice!
+Enter a positive integer:   001230
+Input the split. The split has to divide the length of 123456 i.e. 6:   3
+001, 230
+The sequence is up-monotone.
+Patrick, would you like to test if a number admits an up-monotone split of given size? uf
+Please answer with yes or no. Try again.
+Patrick, would you like to test if a number admits an up-monotone split of given size? . . . . . NO
+Please answer with yes or no. Try again.
+Patrick, would you like to test if a number admits an up-monotone split of given size? No
+**************************************
+*                                    *
+* __Goodbye Patrick! See you soon.__ *
+*                                    *
+**************************************
+
+

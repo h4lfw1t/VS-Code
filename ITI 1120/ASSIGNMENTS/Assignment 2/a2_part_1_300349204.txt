@@ -1,0 +1,176 @@
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+>>> 
+>>> elementary_school_quiz(0,2)
+What is 7 - 1? 6
+What is 9 - 9? 0
+2
+>>> elementary_school_quiz(1,1)
+What is 4 ^ 7? 16384
+1
+>>> elementary_school_quiz(1,1)
+What is 3 ^ 5? 5
+0
+>>> elementary_school_quiz(1,2)
+What is 8 ^ 1? 8
+What is 8 ^ 2? 64
+2
+>>> 
+>>> high_school_quiz(1,3,1)
+The equation 1x^2 + 3x + 1 = 0
+has the following solution: x = -0.3819660112501051 and x = -2.618033988749895
+
+
+high_school_quiz(3,2,15)
+The equation 3x^2 + 2x + 15 = 0
+has the following solution: x = -0.3333333333333333 + 2.2110831935702664i and x = -0.3333333333333333 - 2.2110831935702664i
+
+
+high_school_quiz(3,2,-15)
+The equation 3x^2 + 2x + -15 = 0
+has the following solution: x = 1.9274433277084226 and x = -2.5941099943750894
+
+
+high_school_quiz(1,2,1)
+The equation 1x^2 + 2x + 1 = 0
+has the following solution: x = -1.0 and x = -1.0
+
+
+high_school_quiz(0,2,4)
+The equation 0x^2 + 2x + 4 = 0
+has the following solution: x = -2.0
+
+
+high_school_quiz(0,0,0)
+The equation 0x^2 + 0x + 0 = 0
+has infinitely many solutions
+
+
+high_school_quiz(0,0,10)
+The equation 0x^2 + 0x + 10 = 0
+has no solution
+
+
+
+
+*****************************************
+*                                       *
+* __Welcome to my math quiz generator__ *
+*                                       *
+*****************************************
+Please answer the following questions
+
+What is your name? Patrick
+Hi Patrick. Are you in? Enter 
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+1
+*****************************************************************************
+*                                                                           *
+* __Patrick, Welcome to my quiz generator for elementary school students.__ *
+*                                                                           *
+*****************************************************************************
+What kind of questions would you like to practice? 
+0 for subtraction
+1 for exponentiation
+0
+How many practice questions would you like to do? Enter 1 or 2: 2
+What is 0 - 3? -3
+What is 3 - 2? 1
+Congratulations Patrick! You'll probably get an A tomorrow.
+Good bye Patrick!
+
+
+*****************************************
+*                                       *
+* __Welcome to my math quiz generator__ *
+*                                       *
+*****************************************
+Please answer the following questions
+
+What is your name? Patrick Geraghty
+Hi Patrick Geraghty. Are you in? Enter 
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+ah
+If you would still like to use the program, re-run it and type '1' for  subtraction/exponent practice, or 2 for a quadratic equation solver.
+Good bye Patrick Geraghty!
+
+
+
+*****************************************
+*                                       *
+* __Welcome to my math quiz generator__ *
+*                                       *
+*****************************************
+Please answer the following questions
+
+What is your name? Isildur, heir of Elendil
+Hi Isildur, heir of Elendil. Are you in? Enter 
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+2
+**************************************************************
+*                                                            *
+* __Quadratic equation solver for Isildur, heir of Elendil__ *
+*                                                            *
+**************************************************************
+Isildur, heir of Elendil, would you like a quadratic equation solved? YeS
+Good choice!
+Enter the coefficient a: 1
+Enter the coefficient b: 2
+Enter the coefficient c: 3
+The equation 1.0x^2 + 2.0x + 3.0 = 0
+has the following solution: x = -1.0 + 1.4142135623730951i and x = -1.0 - 1.4142135623730951i
+Isildur, heir of Elendil, would you like a quadratic equation solved? yeS
+Good choice!
+Enter the coefficient a: -1
+Enter the coefficient b: 10
+Enter the coefficient c: 36
+The equation -1.0x^2 + 10.0x + 36.0 = 0
+has the following solution: x = -2.810249675906654 and x = 12.810249675906654
+Isildur, heir of Elendil, would you like a quadratic equation solved? YES
+Good choice!
+Enter the coefficient a: 0
+Enter the coefficient b: 2.5
+Enter the coefficient c: 3.246
+The equation 0.0x^2 + 2.5x + 3.246 = 0
+has the following solution: x = -1.2984
+Isildur, heir of Elendil, would you like a quadratic equation solved? yes
+Good choice!
+Enter the coefficient a: 0
+Enter the coefficient b: 0
+Enter the coefficient c: 2.5
+The equation 0.0x^2 + 0.0x + 2.5 = 0
+has no solution
+Isildur, heir of Elendil, would you like a quadratic equation solved? yes
+Good choice!
+Enter the coefficient a: 0
+Enter the coefficient b: 0
+Enter the coefficient c: 0
+The equation 0.0x^2 + 0.0x + 0.0 = 0
+has infinitely many solutions
+Isildur, heir of Elendil, would you like a quadratic equation solved? NO
+Good bye Isildur, heir of Elendil!
+>>> 
+
+*****************************************
+*                                       *
+* __Welcome to my math quiz generator__ *
+*                                       *
+*****************************************
+Please answer the following questions
+
+What is your name? Pat
+Hi Pat. Are you in? Enter 
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+I hate math
+I hate math too! Let's suffer together!
+Good bye Pat!
+

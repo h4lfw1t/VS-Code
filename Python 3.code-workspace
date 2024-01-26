@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "ITI 1120"
+		},
+		{
+			"path": "PHY 1112"
+		}
+	],
+	"settings": {
+		"wolf.disableHotModeWarning": true,
+		"docwriter.style": "NumPy"
+	}
+}

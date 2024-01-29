@@ -74,13 +74,14 @@ def find_max_temperature_range(high_temperatures, low_temperatures):
 
 # 2. Quadratic root solver with complex root keyword argument
 
-# function to find the discriminant of a quadratic equation (for simpler root finding)
+# function to calculate the discriminant of a quadratic equation
 def discriminant(a,b,c):
-        '''
-        (num,num,num) -> num or complex
-        Takes three numbers as parameters 'a', 'b', and 'c', and returns the discriminant of the quadratic equation.
-        '''
-        return b**2 - 4*a*c
+    '''
+    (num,num,num) -> num
+    Return the discriminant of the quadratic equation.
+    Preconditions: 'a', 'b', and 'c' are all numbers.
+    '''
+    return (b**2) - (4*a*c)
 
 # function to find the roots of a quadratic equation
 def quad_root_finder(a,b,c, complex_root = False):
@@ -89,23 +90,35 @@ def quad_root_finder(a,b,c, complex_root = False):
         Takes three numbers as parameters 'a', 'b', and 'c', as well as keyword argument 'complex_roots' and prints the roots of the quadratic equation. If 'complex_roots' is set to True, the function will print the roots as complex numbers (when applicable). By default, 'complex_roots' is set to False. Furthermore, if a is zero, the function will print the root of the linear equation.
         Preconditions: 'a', 'b', and 'c' are all numbers.
         '''
+
         # check the value of a to avoid division by zero. If a is zero, return the root of the linear equation
         if a == 0:
             print(-c/b)
         # check if the discriminant is positive, negative, complex, or zero and return the roots characteristic of the discriminant
+        # if the discriminant is complex, check the complex_root keyword argument to see if the user wants complex roots as this would yield complex roots.
         elif type(discriminant(a,b,c)) == complex:
             if complex_root == True:
-                print(complex((-b)/(2*a), + (-(-discriminant(a,b,c))**0.5)/(2*a)), complex((-b)/(2*a), - (-(-discriminant(a,b,c))**0.5)/(2*a)))
+                # calculate the roots of the quadratic equation with complex numbers for coefficients using formulas obtained from https://math.stackexchange.com/questions/44406/how-do-i-get-the-square-root-of-a-complex-number .
+                z = discriminant(a,b,c)
+                r = abs(z)
+                print((-b + r**0.5*((z+r)/abs(z+r))) / (2*a))
+                print((-b - r**0.5*((z+r)/abs(z+r))) / (2*a))
             else:
+                # if the user does not want complex roots, print None
                 print(None)
+        # if the discriminant is negative, check the complex_root keyword argument to see if the user wants complex roots as this would yield complex roots.
         elif discriminant(a,b,c) < 0:
-            # as this is the only case that could produce complex roots, check the complex_root keyword argument to see if the user wants complex roots.
             if complex_root == True:
-                print(complex((-b)/(2*a), + (-(-discriminant(a,b,c))**0.5)/(2*a)), complex((-b)/(2*a), - (-(-discriminant(a,b,c))**0.5)/(2*a)))
+                # calculate the roots of the quadratic equation with a negative discriminant by separating real values from imaginary values.
+                print(complex((-b)/(2*a), + (-(-discriminant(a,b,c))**0.5)/(2*a)))
+                print(complex((-b)/(2*a), - (-(-discriminant(a,b,c))**0.5)/(2*a)))
             # if the user does not want complex roots, print None
             else:
                 print(None)
+        # if the discriminant is zero, print the single root of the quadratic equation. No need to check complex_root keyword argument as this would yield real roots.
         elif discriminant(a,b,c) == 0:
                 print((-b)/(2*a))
+        # if the discriminant is positive, calculate the roots of the quadratic equation and print them. No need to check complex_root keyword argument as this would yield real roots.
         else:
-                print((-b + (discriminant(a,b,c)**0.5))/(2*a), (-b - (discriminant(a,b,c)**0.5))/(2*a))
+                print((-b + (discriminant(a,b,c)**0.5))/(2*a))
+                print((-b - (discriminant(a,b,c)**0.5))/(2*a))

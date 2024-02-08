@@ -30,10 +30,6 @@ def refraction_plot_glass(n1,n2):
     
     plt.xlim(0, np.pi/2)
     
-    xtick_values = [0, np.pi/6, np.pi/5, np.pi/4, np.pi/3, np.pi/2]
-    xtick_labels = ['0', r'$\frac{pi}{6}$', r'$\frac{pi}{5}$', r'$\frac{pi}{4}$', r'$\frac{pi}{3}$', '$\frac{pi}{2}$']
-    plt.xticks
-    
     plt.xlabel('Angle of Incidence (radians)')
     plt.ylabel('Reflection Coefficient')
     plt.title('Reflection Coefficient as a Function of Angle of Incidence')

@@ -3,7 +3,7 @@ Filename:       a5_300349204.py
 Author:         Patrick Geraghty
 Date Created:   2024-02-11
 Date Modified:  2024-02-11
-Description:    
+Description:    Contains functions for Assignment 5 and additional functions. Functions include: 'fibonacci_term', 'fibonacci_sequence_loop', 'fibber_rec', 'fibber_loop', 'recursive_multiplication', 'rec_mult_loop_output', 'velocity', 'position', 'distance_from_origin', 'velocity_magnitude', 'closest_body', and 'fastest_body'. See docstrings for details.
 '''
 
 import time as t
@@ -111,3 +111,70 @@ def rec_mult_loop_output(a, b):
 
 # 3. Rigid Read-In
 
+# define function 'velocity' to contain the data from 'PHY1112_A5_Q3_Velocities.csv' in an array
+def velocity():
+    '''
+    () -> np.array
+    Returns an array of velocities containing the relevant data in 'PHY1112_A5_Q3_Velocities.csv'.
+    Preconditions: 'PHY1112_A5_Q3_Velocities.csv' is a valid file.
+    '''
+    # load the data from the file using np.genfromtxt. Define necessary columns, skip the header, identify the separator, and define the data type as float
+    return np.genfromtxt('PHY1112_A5_Q3_Velocities.csv', skip_header=1, usecols=(1,2,3), delimiter=',', dtype=float)
+
+# define function 'position' to contain the data from 'PHY1112_A5_Q3_Positions.csv' in an array
+def position():
+    '''
+    () -> np.array
+    Returns an array of positions containing the relevant data in 'PHY1112_A5_Q3_Positions.csv'.
+    Preconditions: 'PHY1112_A5_Q3_Positions.csv' is a valid file.
+    '''
+    # load the data from the file using np.genfromtxt. Define necessary columns, skip the header, identify the separator
+    return np.genfromtxt('PHY1112_A5_Q3_Positions.csv', skip_header=1, usecols=(1,2,3), delimiter=',', dtype=float)
+
+# define function 'distance_from_origin' to calculate the distance of each body from the origin
+def distance_from_origin():
+    '''
+    () -> np.array
+    Returns an array of distances from the origin for each body using data from the 'position()' function.
+    Preconditions: None
+    '''
+    pos_x = position()[:,0]     # set x position to the first column of the position array
+    pos_y = position()[:,1]     # set y position to the second column of the position array
+    pos_z = position()[:,2]     # set z position to the third column of the position array
+    # calculate the distance from the origin using the Pythagorean theorem and return the array
+    return np.array([np.sqrt(pos_x[i]**2 + pos_y[i]**2 + pos_z[i]**2) for i in range(len(pos_x))])
+
+# define function 'velocity_magnitude' to calculate the magnitude of the velocity of each body    
+def velocity_magnitude():
+    '''
+    () -> np.array
+    Returns an array of the magnitude of the velocity for each body using data from the 'velocity()' function.
+    Preconditions: None
+    '''
+    vel_x = velocity()[:,0]     # set x velocity to the first column of the velocity array
+    vel_y = velocity()[:,1]     # set y velocity to the second column of the velocity array
+    vel_z = velocity()[:,2]     # set z velocity to the third column of the velocity array
+    # calculate the magnitude of the velocity using the Pythagorean theorem and return the array
+    return np.array([np.sqrt(vel_x[i]**2 + vel_y[i]**2 + vel_z[i]**2) for i in range(len(vel_x))])
+
+# define function 'closest_body' to find the body closest to the origin
+def closest_body():
+    '''
+    () -> None
+    Prints the body closest to the origin and the distance from the origin.
+    Preconditions: None
+    '''
+    distances = distance_from_origin() # set distances to the array of distances from the origin
+    # print the body closest to the origin and the distance from the origin using an f-string
+    print(f'The closest body to the origin is body {np.argmin(distances) + 1} at a distance of {np.min(distances)}')
+
+# define function 'fastest_body' to find the body with the fastest velocity
+def fastest_body():
+    '''
+    () -> None
+    Prints the body with the fastest velocity and the velocity.
+    Preconditions: None
+    '''
+    velocities = velocity_magnitude() # set velocities to the array of magnitudes of the velocity
+    # print the body with the fastest velocity and the velocity using an f-string
+    print(f'The fastest body is body {np.argmax(velocities) + 1} with a velocity of {np.max(velocities)}')

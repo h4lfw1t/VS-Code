@@ -126,7 +126,6 @@ def gravitational_force(mass, base, height):
     Preconditions: mass, base, and height are all numbers, the mass is positioned at the topmost point of the surface.
     '''
     angle = np.arctan(height/base)
-    print(mass*9.8*np.array([-np.sin(angle), -np.cos(angle)]))
     return mass*9.8*np.array([-np.sin(angle), -np.cos(angle)])
 
 # define a function to calculate the normal force
@@ -136,8 +135,9 @@ def normal_force(mass, base, height):
     Calculates the normal force vector acting on an object on an inclined surface given the objects mass, and the base and height lengths oh the inclined surface.
     Preconditions: mass, base, and height are all numbers, the mass is positioned at the topmost point of the surface.
     '''
+    # use standard equation for normal force Fn = mg*cos(angle) where g is the acceleration due to gravity (9.8 m/s^2)
+    # note that the x component is 0 because the normal force is perpendicular to the surface (solely the y-axis)
     angle = np.arctan(height/base)
-    print(mass*9.8*np.array([0, np.cos(angle)]))
     return mass*9.8*np.array([0, np.cos(angle)])
 
 # define a function to calculate the acceleration of the mass
@@ -147,7 +147,7 @@ def acceleration(mass, base, height):
     Calculates the acceleration vector acting on an object on an inclined surface given the objects mass, and the base and height lengths oh the inclined surface. The x and y vector coordinates are given with the surface representing the positive x-axis and perpendicular to the surface representing the positive y-axis.
     Preconditions: mass, base, and height are all numbers, the mass is positioned at the topmost point of the surface.
     '''
-    print((gravitational_force(mass, base, height) + normal_force(mass, base, height))/mass)
+    # use standard equation for acceleration a = (Fg + Fn)/m
     return (gravitational_force(mass, base, height) + normal_force(mass, base, height))/mass
 
 # define a function to calculate the frictional force vector
@@ -157,7 +157,7 @@ def frictional_force(mass, base, height, friction_coefficient):
     Calculates the frictional force vector acting on an object on an inclined surface given the objects mass, and the base and height lengths oh the inclined surface. The x and y vector coordinates are given with the surface representing the positive x-axis and perpendicular to the surface representing the positive y-axis.
     Preconditions: mass, base, and height are all numbers, the mass is positioned at the topmost point of the surface.
     '''
-    print(np.array([-friction_coefficient*np.linalg.norm(normal_force(mass, base, height)), 0]))
+    # use standard equation for frictional force Ff = -u*|Fn|, use np.linalg.norm to calculate the magnitude of the normal force
     return np.array([-friction_coefficient*np.linalg.norm(normal_force(mass, base, height)), 0])
 
 # define a function to calculate acceleration of the mass taking friction into consideration
@@ -167,5 +167,15 @@ def acceleration_with_friction(mass, base, height, friction_coefficient):
     Calculates the acceleration vector acting on an object on an inclined surface given the objects mass, and the base and height lengths oh the inclined surface. The x and y vector coordinates are given with the surface representing the positive x-axis and perpendicular to the surface representing the positive y-axis.
     Preconditions: mass, base, and height are all numbers, the mass is positioned at the topmost point of the surface.
     '''
-    print((gravitational_force(mass, base, height) + normal_force(mass, base, height))/mass - frictional_force(mass, base, height, friction_coefficient)/mass)
+    # use standard equation for acceleration with friction a = (Fg + Fn - Ff)/m
     return (gravitational_force(mass, base, height) + normal_force(mass, base, height))/mass - frictional_force(mass, base, height, friction_coefficient)/mass
+
+# define a function to calculate the velocity of the mass after t seconds
+def velocity_wrt_time(mass, base, height, friction_coefficient, t):
+    '''
+    (int, int, int, float, int) -> np.array
+    Calculates the velocity vector acting on an object on an inclined surface given the objects mass, and the base and height lengths oh the inclined surface. The x and y vector coordinates are given with the surface representing the positive x-axis and perpendicular to the surface representing the positive y-axis.
+    Preconditions: mass, base, and height are all numbers, the mass is positioned at the topmost point of the surface.
+    '''
+    # use standard equation for velocity v = at
+    return acceleration_with_friction(mass, base, height, friction_coefficient)*t

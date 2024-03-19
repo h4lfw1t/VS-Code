@@ -19,6 +19,9 @@ def euler_loop(f, a, b, y0, n):
 def fx(x, y):
     return x + y
 
+def gx(x, y):
+    return -y * x
+
 # def eulers_method_vectorized(f, n, a, b, y0):
 #     h = (b - a) / n
 #     x = np.linspace(a, b, num=n)
@@ -29,4 +32,4 @@ def fx(x, y):
 
 # print(f'Vectorized: {eulers_method_vectorized(fx, 10, 0, 1, 1)}')
 
-print(f'Loop: {eulers_method(fx, 10, 0, 1, 1)}')
+# print(f'Loop: {eulers_method(fx, 10, 0, 1, 1)}')
